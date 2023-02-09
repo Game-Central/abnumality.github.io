@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+<body>
+<embed></embed>
+<script>
+    var game = (new window.URL(window.location.href)).searchParams.get('game');
+	
+    window.RufflePlayer = window.RufflePlayer || {};
+
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
+        container.appendChild(player);
+        player.load(game);
+    });
+</script>
+<script src="ruffle.js"></script></body>
+</html>
