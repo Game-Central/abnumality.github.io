@@ -1,15 +1,13 @@
 <!doctype html>
 <html>
 <head>
-<meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
+<title>Flash Player</title>
 </head>
 <body>
-<embed></embed>
-<script>
-    var game = (new window.URL(window.location.href)).searchParams.get('game');
-    document.querySelectorAll('embed').src = game;
-</script>
+<embed id="embed" style="position:absolute; top:0; left:0; width:100%; height:100%; border: none; overflow: hidden;"></embed>
 <script src="ruffle.js"></script>
-	</body>
+<script>
+document.getElementById('embed').src = (new window.URL(window.location.href)).searchParams.get('game');
+</script>
+</body>
 </html>
