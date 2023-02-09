@@ -8,16 +8,8 @@
 <embed></embed>
 <script>
     var game = (new window.URL(window.location.href)).searchParams.get('game');
-	
-    window.RufflePlayer = window.RufflePlayer || {};
-
-    window.addEventListener("DOMContentLoaded", () => {
-        let ruffle = window.RufflePlayer.newest();
-        let player = ruffle.createPlayer();
-        let container = document.getElementById("container");
-        container.appendChild(player);
-        player.load(game);
-    });
+    document.querySelectorAll('embed').src = game;
 </script>
-<script src="ruffle.js"></script></body>
+<script src="ruffle.js"></script>
+	</body>
 </html>
